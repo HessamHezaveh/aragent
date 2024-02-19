@@ -233,6 +233,7 @@ span{
 .portfolio{
     background: var(--second-bg-color);
     box-shadow: 0 0 3rem var(--second-bg-color);
+    margin-top: 7rem;
 }
 .portfolio h2{
     margin-bottom: 4rem;
@@ -246,6 +247,7 @@ span{
     padding-bottom: 5rem;
     
 }
+
 .portfolio-container .portfolio-box{
     position: relative;
     border-radius: 2rem;
@@ -325,6 +327,105 @@ span{
     font-size: 2rem;
     color: var(--second-text-color);
     
+}
+
+/*services*****************************************************************************/
+
+.otherServices h2{
+    margin-bottom: 4rem;
+    color: var(--second-text-color);
+}
+.otherServices-container{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    gap: 3rem;
+    padding-bottom: 5rem;
+    
+}
+
+.otherServices-container .otherServices-box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 2rem #131313;
+    overflow: hidden;
+    display: flex;
+    
+    
+
+    /*added
+    width: 800px;
+    height: 500px;*/
+    /*******/
+
+
+}
+.otherServices-box img{
+    /*added
+    object-fit:cover;
+    */
+    width: 100%;
+    transition: .5s ease;
+    filter: brightness(70%)
+    
+}
+.otherServices-box:hover img{
+    transform: scale(1.1);
+    filter: brightness(40%)
+}
+.otherServices-box .otherServices-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.01), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 2rem;
+    transform: translateY(50%);
+    transition: .5s ease;
+    color: var(--second-text-color);
+    
+    
+}
+
+
+.otherServices-box:hover .otherServices-layer{
+    transform: translateY(0%);
+
+}
+.otherServices-layer h4{
+    font-size: 2.2rem;
+    padding-bottom: 3rem;
+}
+
+.otherServices-layer p {
+    font-size: 1.4rem;
+    margin: .3rem 0 1rem;
+}
+.otherServices-layer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border-radius: 50%;
+    border: solid var(--bg-color) 3px;
+    color: var(--second-text-color);
+}
+
+.otherServices-layer a i{
+    font-size: 2rem;
+    color: var(--second-text-color);
+    
+}
+.otherServices-layer h4{
+    font-size: 2rem;
 }
 
 /**********contact*********/
@@ -437,6 +538,24 @@ span{
         gap: 3rem;
         padding-bottom: 5rem;
     }
+    .otherServices-box .portfolio-layer{
+
+        padding: 0 2rem;
+        transform: translateY(50%);
+
+        
+    }
+    .otherServices-container{
+
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        gap: 3rem;
+        padding-bottom: 5rem;
+    }
+    .otherServices-layer h4{
+        font-size: 2rem;
+    }
+
     
 
 }
@@ -529,8 +648,18 @@ span{
 /*************************media 4****************/
 @media (max-width: 620px){
     .portfolio-container{
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1,1fr);
     }
+    .otherServices-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .otherServices-layer h4{
+        font-size: 1.5rem;
+    }
+
+
+
+
     .contact form .input-box div {
         width: 100%;
     }
